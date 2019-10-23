@@ -235,7 +235,8 @@ Editor.prototype = {
         }
 
         this.selection.createRangeByElem($last, false, true)
-        this.selection.restoreSelection()
+        // 注释掉自动获取焦点的功能
+        // this.selection.restoreSelection()
     },
 
     // 绑定事件
