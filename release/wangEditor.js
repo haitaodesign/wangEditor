@@ -682,7 +682,7 @@ var config = {
     // 自定义上传图片超时时间 ms
     uploadImgTimeout: 10000,
 
-    // 上传图片 hook 
+    // 上传图片 hook
     uploadImgHooks: {
         // customInsert: function (insertLinkImg, result, editor) {
         //     console.log('customInsert')
@@ -4470,7 +4470,7 @@ Editor.prototype = {
             // 当前编辑器是否是焦点状态
             this.isFocus = false;
 
-            $(document).on('click', function (e) {
+            $(document).on('mousedown', function (e) {
                 //判断当前点击元素是否在编辑器内
                 var isChild = $textElem.isContain($(e.target));
 
@@ -4550,7 +4550,7 @@ Editor.prototype = {
             }
         }
 
-        this.selection.createRangeByElem($last, false, true);
+        // this.selection.createRangeByElem($last, false, true);
         // 注释掉自动获取焦点的功能
         // this.selection.restoreSelection()
     },
